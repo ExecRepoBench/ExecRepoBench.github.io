@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="CodeArena" />
+  <meta name="keywords" content="Multilingual, Code, Large Language Models, LLM, Code LLM, Evaluation, Benchmark" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>
+    ExecRepoBench
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet"></link>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/bulma.min.css" />
+  <link rel="stylesheet" href="./css/bulma-carousel.min.css" />
+  <link rel="stylesheet" href="./css/bulma-slider.min.css" />
+  <link rel="stylesheet" href="./css/fontawesome.all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="icon" href="./images/favicon.svg" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./js/fontawesome.all.min.js"></script>
+  <script src="./js/bulma-carousel.min.js"></script>
+  <script src="./js/bulma-slider.min.js"></script>
+  <script src="./js/index.js"></script>
+
+  <style>
+    .rounded-box {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 800px;
+            text-align: center;
+            background-color: #fefaf5;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+    /* 应用 Cinzel 字体到标题 */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Cinzel', serif;
+    }
+
+    /* 应用 IM Fell Great Primer 字体到正文 */
+    body, p, span, div {
+      font-family: 'IM Fell Great Primer', serif;
+    }
+
+    body {
+      background-color: #fdf8f0; /* 羊皮纸背景色 */
+    }
+
+    .spacer {
+      margin-left: 4px; /* 或者你想要的任何间距值 */
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              Executable Code Completion Evaluation with Code Large Language Models
+            </h1>
+        <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="">Jian Yang</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="">Jiajun Zhang</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="">Jiaxi Yang</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="">Ke Jin</a><sup></sup>,</span>
+              <span class="author-block">
+                <a href="">Lei Zhang</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="">Qiyao Peng</a><sup>3</sup>,</span>
+              <span class="author-block">
+                <a href="">Ken Deng</a><sup></sup>,</span>
+              <span class="author-block">
+                <a href="">Tianyu Liu</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="">Zeyu Cui</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="">Binyuan Hui</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="">Junyang Lin</a><sup>1</sup>,</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Alibaba Group;</span>
+              <span class="author-block"><sup>2</sup>University of Chinese Academy of Sciences;</span>
+              <span class="author-block"><sup>3</sup>Tianjin University;</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="spacer"></span> <!-- 增加间距 -->
+                <span class="link-block">
+                  <a href="https://github.com/QwenLM/Qwen2.5-Coder/tree/main/qwencoder-eval/instruct/CodeArena"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <span class="spacer"></span> <!-- 增加间距 -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/CSJianYang/CodeArena"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Evaluation Data</span>
+                  </a>
+                </span>
+                <span class="spacer"></span> <!-- 增加间距 -->
+                <!-- Leaderboard Link. -->
+                <span class="link-block">
+                  <a href="leaderboard.html" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-trophy"></i>
+                    </span>
+                    <span>Leaderboard</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              <!-- <span class="dnerf">codearena</span>  -->
+              Code completion has become an essential tool for daily software development. 
+              Existing evaluation benchmarks often employ static methods that do not fully capture the dynamic nature of real-world coding environments 
+              and face significant challenges, including limited context length, reliance on superficial evaluation metrics, and potential overfitting to training datasets. 
+              In this work, we introduce a novel framework for enhancing code completion in software development through the creation of a repository-level benchmark EXECREPOBENCH and the instruction corpora REPOINSTRUCT, 
+              aim at improving the functionality of open-source large language models (LLMs) in real-world coding scenarios that involve complex interdependencies across multiple files. 
+              <span class="dnerf">EXECREPOBENCH</span> include 1.0K samples from active Python repositories. Plus, we present a multi-level grammar-based completion methodology conditioned on the abstract syntax tree to mask code fragments 
+              at various logical units (e.g. statements, expressions, and functions). Then, we fine-tune the opensource LLM with 7B parameters on REPOINSTRUCT toproduceastrongcodecompletion baseline model based on the open-source model 
+              (Qwen2.5-Coder-Instruct-C). Qwen2.5-CoderInstruct-C is rigorously evaluated against existing benchmarks, including CrossCodeEval and EXECREPOBENCH, which consistently outperforms prior baselines across all programming languages. 
+              The deployment of Qwen2.5-CoderInstruct-C can be used as a high-performance, local service for programming development.
+            </p>
+          </div>
+          <div class="columns is-centered">
+            <img src="./images/figure1.png" alt="Code Generation Live Evaluation" class="teaser-image" width="60%"
+            height="60%" class="center" />
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Introduction</h2>
+          <div class="content has-text-justified">
+            <p>
+            </p>
+            <p>
+              In the field of software engineering, the emergence of large language models (LLMs) designed specifically for code-related tasks has including AlphaCode (Li et al., 2022), SantaCoder (Allal et al., 2023), InCoder (Fried et al., 2022), CodeT5 (Wang et al., 2021), and DeepSeekCoder (Guo et al., 2024a) and Qwen-Coder (Hui et al., 2024), have been pre-trained on extensive datasets comprising billions of code-related data. Notably, models such as Starcoder (Li et al., 2023; Lozhkov et al., 2024), CodeLlama (Rozière et al.,
+2023), DeepSeek-Coder (Guo et al., 2024a), and Code-Qwen (Bai et al., 2023) have advanced the capabilities of these systems. The advent of Code LLMs has revolutionized the automation of software development tasks, providing contextually relevant code suggestions and facilitating the translation from natural language to code. This discussion delves into existing literature and major contributions within the realm of Code LLMs, underscoring the progress made, diverse applications, and potential future developments in the field.
+            </p>
+            <p>
+              The code completion task holds paramount importance in modern software development, acting as a cornerstone for enhancing coding efficiency and accuracy. By analyzing the context of the ongoing work and using sophisticated algorithms to predict and suggest the next segments of code, code completion tools drastically reduce the time and effort programmers spend on writing boilerplate code, navigating large codebases, or recalling complex APIs and frameworks, which both accelerates the software development cycle and significantly diminishes the likelihood of syntax errors and bugs, leading to cleaner, more maintainable code. The recent code LLMs (Bavarian et al., 2022; Zheng et al., 2023) complete the middle code based on the prefix and suffix code through prefix-suffix-middle (PSM) and suffix-prefix-middle (SPM) pre-training paradigm. To correctly evaluate the code completion capability, the HumanEval benchmark (Allal et al., 2023; Zheng et al., 2023) is extended to the infilling task by randomly masking some code spans and lines and prompting LLms to predict the middle code. The recent works (Ding et al., 2023) propose to use the cross-file context to complete the current file and then score the results with n-gram string match. However, the community still lacks an executable evaluation repository-level benchmark from live repositories and the corresponding instruction corpora.
+            </p>
+            <p>
+              In this work, we benchmark, elicit, and enhance code repository-level completion tasks of open-source large language models (LLMs) by creating the repository-level instruction corpora
+REPO-INSTRUCT and the corresponding benchmark EXECREPOBENCH for utilization and evaluation for code completion in real-world software development scenarios, where projects frequently involve complex dependencies across multiple files. Unlike previous benchmarks with text-matching metrics (e.g. exact match (EM) and edit similarity (ES)), we EXECREPOBENCH is constructed with repository-level unit tests to verify the correctness of the completion code, which contains 1.5K samples from 25 active Python repositories. To facilitate the attention of the community for the code completion task, we propose the multilevel grammar-based completion to create REPOINSTRUCT, where the code fragments under the different levels of logical units are masked for completion using the parsed abstract syntax tree (AST). During supervised finetuning (SFT), the code snippet of the repository is packed into the instruction data for the code completion LLMs Qwen2.5Coder-Instruct-C, where the query gives the prefix code of the current file, suffix code of the current file, and code snippets of other files.
+            </p>
+            <div class="columns is-centered">
+              <img src="./images/figure2.png" alt="Code Generation Live Evaluation" class="teaser-image" width="60%"
+              height="60%" class="center" />
+            </div>
+
+            <p>
+              Qwen2.5-Coder-Instruct-C is evaluated on the CrossCodeEval (Ding et al., 2023) and our created benchmark EXECREPOBENCH. The results demonstrate that Qwen2.5-Coder-Instruct-C consistently achieves state-of-the-art performance across all languages, notably surpassing the previous baselines. The contributions are summarized as follows:
+            </p>
+            <p>
+              •	We introduce executable repository-level benchmark EXECREPOBENCH for code completion evaluation, which collects the active repositories from GitHub and modify them into executable formats with test cases.<br>
+              •	We propose the multi-level grammar-based completion conditioned on the abstract syntax tree, where the statement-level,expressionlevel, function-level, and class-level code snippets are extracted for multi-level completion instruction corpora REPO-INSTRUCT<br>
+              •	Based on the open-source LLMs and the instruction corpora REPO-INSTRUCT, we finetune base LLMs with 7B parameters Qwen2.5Coder-Instruct-C with a mixture of code completion data and standard instruction corpora, which can be used as a local service for programming developer.<br>
+            </p>
+            <div class="columns is-centered">
+              <img src="./images/figure3.png" alt="Code Generation Live Evaluation" class="teaser-image" width="100%"
+              height="100%" class="center" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">EXECREPOBENCH Construction</h2>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">Data Collection.</span> The collected and refined repositories should follow the following guidelines: (1) Search Github code repositories of the Python language that have been continuously updated. (2) Given the collected repositories, the annotator should collect or create the test cases for evaluation. (3) All collected repositories should pass the test cases in a limited time for fast evaluation (< 2 minutes). In Figure 2, we collect diverse repositories for comprehensive code completion evaluation.
+            </p>
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">Data Statistics.</span> To create the benchmark EXECREPOBENCH, we first construct the random span completion, random single-line completion, and random multi-line completion task by masking contiguous spans and lines of the chosen file of the whole repository. For the grammar-based completion, we first parse the code into an abstract syntax tree (AST) tree and randomly mask the node to match the input habits of programming developers habits. Besides, we sort the context files using the relevance between the current masked file and The data statistic of EXECREPOBENCH is listed in Table 1.
+            </p>
+          </div>
+          <div class="columns is-centered">
+            <img src="./images/table_1.png" alt="Code Generation Live Evaluation" class="teaser-image" width="80%"
+            height="80%" class="center" />
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Qwen2.5-Coder-Instruct-C</h2>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">Multi-level Grammar-based Completion.</span> 
+              Inspired by programming language syntax rules and user habits in practical scenarios, we leverage the tree-sitter-languages  to parse the code snippets and extract the basic logic blocks as the middle code to infill. For example, the abstract syntax tree (AST) represents the structure of Python code in a tree format, where each node in the tree represents a construct occurring in the source code. The tree’s hierarchical nature reflects the syntactic nesting of constructs in the code, and includes various elements such as expressions, statements, and functions. By traversing and manipulating the AST, we can randomly extract the nodes of multiple levels and use the code context of the same file to uncover the masked node.
+            </p>
+          </div>
+
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">Expression-level.</span> 
+              At the expression level, we focus on completing sub-expressions within larger expressions or simple standalone expressions. This might involve filling in operand or operator gaps in binary operations or providing appropriate function arguments.
+            </p>
+          </div>
+
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">Statement-level Completion.</span> 
+              This level targets the completion of individual statements, such as variable assignments, control flow structures (if statements, for loops), and others. The goal is to maintain the logical flow and ensure syntactic correctness.
+            </p>
+          </div>
+
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">Function-level Completion.</span> 
+              At the function level, our approach involves completing entire function bodies or signature infillings. This includes parameter lists, return types, and the internal logic of the functions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Heuristic Completion Techniques.</h2>
+
+          
+          <div class="content has-text-justified">
+            <p>
+              To enhance the performance of our AST-based code infilling, we implement heuristic completion techniques to mimic the complementary habits of human users.
+            </p>
+          </div>
+
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">Random Line Completion.</span> 
+              We randomly select lines from the same file or similar files in the dataset to serve as candidates for completion. This process requires additional context-aware filtering to maintain relevance and accuracy.
+            </p>
+          </div>
+
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">Random Span Completion.</span> 
+              Instead of single lines, we randomly select code spans - sequences of lines that represent cohesive logical units. This approach suits larger blocks of code, needing a finer grasp of context and structure for effective completion.
+            </p>
+          </div>
+          
+          <h2 class="title is-4">Hybrid Instruction Tuning</h2>
+
+          <div class="content has-text-justified">
+            <p>
+              Unlike foundational models trained with specific objectives, we fine-tuned large language models using a mixed set of code completion data. The training objective for code completion involves combining the context of code snippets with specific elements to evaluate the execution of multiple files within the same codebase.
+              We also incorporated standard instruction data. In the question-answer instruction tuning, we calculated the match degree between queries and corresponding answers in the dataset, which includes tasks such as code generation, code summarization, and other code-related tasks.
+              We integrated code completion and question-answer capabilities into a single instruction model. The training objective of mixed instruction tuning combines the code completion objective with the question-answer objective, forming a unified training goal.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Experiments.</h2>
+          <h2 class="title is-4">Code LLMs</h2>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">CodeGen.</span>
+              CodeGen 2.5 (Nijkamp et al., 2023) represents the generative code language models (code LLMs), introducing capabilities for fillin-the-middle inputs and enhancing performance through multi-epoch training.
+            </p>
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">StarCoder/StarCoder2.</span>
+              StarCoder (1B, 3B, and 7B) is a generative code LM trained on the Stack dataset, which supports up to 8k tokens.
+            </p>
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">CodeLlama.</span>
+              CodeLlama trained on sequences of 16k tokens show improvements on inputs with up to 100k tokens in different sizes of parameters, including 7B, 13B, and 70B.
+            </p>
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">CodeGeeX.</span>
+              CodeGeeX2/4 a large-scale multilingual open-source code generation model with 6B/13B parameters, pre-trained on a large code corpus of more than 20 programming languages.
+            </p>
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">CodeQwen.</span>
+              CodeQwen (7B) is trained on nearly 2T code tokens, supporting long context understanding and generation of 92 programming languages with the context length of 64K tokens.
+            </p>
+          </div>
+          <h2 class="title is-4">Implementation Details</h2>
+          <div class="content has-text-justified">
+            <p>
+              We extract the repository-level code snippets from the-stack-V2  and filter the data with heuristic rules (e.g. GitHub stars and file length). We keep the mainstream programming language (Python, C-sharp, Cpp, Java, Javascript, Typescript, Php) and drop other long-tailed languages to obtain nearly 1.5M repositories. Finally, we obtain the instruction dataset REPO-INSTRUCT contains nearly 3M completion samples. We fine-tune the opensource base foundation LLM CodeQwen on nearly 600K instruction samples used in CodeQwen-Chat (Bai et al., 2023) and code completion data (in-file and cross-file completion data). Qwen2.5-CoderInstruct-C is fine-tuned on Megatron-LM  with 64 NVIDIA A100-80GB GPUs. The learning rate first increases into 8×10−  with 200 warmup steps and then adopts a cosine decay scheduler. We adopt the Adam optimizer (Kingma and Ba, 2015) with a global batch size of 1024 samples, truncating sentences to 32K tokens.
+            </p>
+            <br />
+          </div>
+          
+          <h2 class="title is-4">Evaluation Benchmarks</h2>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">CrossCodeEval.</span>
+              CrossCodeEval (Ding et al., 2023) is developed using a variety of real-world, openly available repositories with permissive licenses, covering four widely used programming languages: Python, Java, TypeScript, and C-sharp. To generate examples that necessitate understanding context across different files for precise completion, we suggest a simple but effective method based on static analysis to identify instances where cross-file context is used within a given file. 
+            </p>
+          </div>
+
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">EXECREPOBENC.</span>
+              To accurately assess the performance of different LLMs, EXECREPOBENCH infills the generated code and executes the repository with the provided unit tests. The total tokens of the current file and the context files are truncated into the specific number for model input (8K tokens).
+            </p>
+          </div>
+          
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">MultiPL-E.</span>
+              Since the mixture training of instruction samples and code completion samples, Qwen2.5-Coder-Instruct-C also supports answering the code-related queries. We adopt MultiPL-E (Cassano et al., 2023) for multilingual evaluation, including Python, Java, Javascript, PHP, Rust, and Swift.
+            </p>
+            <br />
+          </div>
+        
+
+
+          <h2 class="title is-4">Evaluation Metrics</h2>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">CrossCodeEval.</span>
+              For the code match, we compare the generated code with the groundtruth using exact match (EM) and edit similarity (ES). For the identifier match evaluating the ability of LLMs to predict the correct APIs, we compare the predict identifiers with the reference and report the results in EM and F1 score5.
+            </p>
+          </div>
+          
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">EXECREPOBENCH.</span>
+              Similar to the in-file benchmark HumanEval/MBPP, we employ the Pass@k metric (Chen et al., 2021) based on the executable results to get the reliability evaluation results. The total number of successfully passing test.
+            </p>
+          </div>
+
+          <h2 class="title is-4">Main Results</h2>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">CrossCodeEval.</span>
+              CrossCodeEval For the CrossCodeEval benchmark evaluation in Table 2 of various code language models (LLMs), our findings clearly indicate the significance of cross-file context and the superiority of the Qwen2.5-Coder-Instruct-C in obtaining the reasonable code completion. Particularly noteworthy is the remarkable improvement in performance achieved through multi-level fine-tuning strategies. Additionally, our analysis reveals a notable decline in performance when the retrieved contexts are excluded, emphasizing their importance in the effectiveness of the code LLMs.
+            </p>
+          </div>
+          <div class="columns is-centered">
+            <img src="./images/table_2.png" alt="Code Generation Live Evaluation" class="teaser-image" width="60%"
+            height="60%" class="center" />
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">EXECREPOBENCH.</span>
+              Table 3 presents a comparative analysis of various code completion models,highlighting their performance across different metrics and parameter sizes. 
+              CodeLLMs (e.g. CodeLlamaandStarCoder) are evaluated across several completion tasks: random completion(span,single-line,multi-line),and grammar based completion(expression,statement,function).
+              Our proposed model Qwen2.5-Coder-Instruct-C, significantly outperforms competing models in all categories despite having only 7B parameters. With scores ranging from 20.4 in Span random completion to 12.4 in both Multi-line random completion and Function grammar-based completion, Qwen2.5-Coder-Instruct-C achieves an impressive average score of 17.1, marking a substantial advancement in the field of code completion technologies.
+            </p>
+          </div>
+          <div class="columns is-centered">
+            <img src="./images/table_3.png" alt="Code Generation Live Evaluation" class="teaser-image" width="80%"
+            height="80%" class="center" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Analysis</h2>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">Ablation Study.</span>
+              Figure 4 emphasizes the essence of each component in our method by conducting the ablation study. 4(a) shows the model results of the code completion task CrossCodeEval and 4(b) plots the results on the instruction-following code benchmark MultiPL-E. Since the popularity of the code completion task and the
+            </p>
+          </div>
+          <div class="columns is-centered">
+            <div class="column">
+              <img src="./images/figure4_1.png" class="teaser-image" width="100%" height="auto" />
+            </div>
+            <div class="column">
+              <img src="./images/figure4_2.png" class="teaser-image" width="100%" height="auto" />
+            </div>
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">Instruction Capability of Qwen2.5-CoderInstruct-C.</span>
+              Table 4 showcases the evaluation results in terms of Pass@1 performance (%) across various models on the MultiPL-E benchmark, focusing on different programming languages. The comparison is categorically divided between proprietary models, like GPT-3.5 and GPT-4, and opensource models, which include CodeLlama, Wizard-Coder, and StarCoder variants, among others. GPT-4, a proprietary model, leads with an average of 76.1%, showcasing the difference in performance capability between proprietary and open-source models. The results highlight the effectiveness of our method, particularly in optimizing performance within the constraints of parameter size. Notably, our method, Qwen2.5-Coder-Instruct-C, with 7 billion parameters, outperforms other models in this parameter range across all listed programming languages, achieving an average Pass@1 performance of 49.9%. This is a significant improvement over other models with similar parameter sizes. For instance, CodeLlama with 34 billion parameters achieves an average performance of 40.4% to 41.9% across its variants, whereas WizardCoderSC and StarCoder, both with 15 billion parameters, yield lower averages of 38.4% and 28.1%, respectively.
+            </p>
+          </div>
+          <div class="columns is-centered">
+            <img src="./images/table_4.png" alt="Code Generation Live Evaluation" class="teaser-image" width="60%"
+            height="60%" class="center" />
+          </div>
+
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">Case Study.</span>
+              Figure 5 showcases a part of a Python module named BankOperation which focuses on simulating basic bank account operations. The module, assumed to be spread across files, includes the BankAccount class definition housed within the given code snippet. Within this class, methods are defined for initializing an account (__init__), depositing money (deposit), and displaying the account balance (display_balance). The core segment provided adds a withdraw method to this class, which allows for deducting a specified amount from the account’s balance if the amount is positive and does not exceed the available balance. Each transaction (deposit and withdrawal) is followed up with a call to A.sync(), hinting at an operation to synchronize the current state of the account with a database, potentially managed by code within A.py. Error handling is incorporated within the deposit and withdrawal operations to ensure amounts are valid. The description wraps up this modular approach to implementing a banking system in Python, emphasizing object-oriented programming principles, error management, and database integration. This example shows that Qwen2.5-Coder-Instruct-C can successfully find the dependency from the
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Related Work</h2>
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">Code Large Language Models.</span>
+              In the field of software engineering, the advent of large language models (LLMs) tailored for code-centric tasks has proven to be transformative. Models like CodeBERT (Feng et al., 2020), Codex (Chen et al.,
+2021), BLOOM (Scao et al., 2022), AlphaCode (Li et al., 2022), SantaCoder (Allal et al., 2023), incoder (Fried et al., 2022), Codet5 (Wang et al., 2021), OpenCodeInterpreter (Zheng et al., 2024), DeepSeek-Coder (Guo et al., 2024a), and CodeQwen (Bai et al., 2023) — all trained on vast corpuses comprising billions of code snippets — have fundamentally augmented the development process. These Code LLMs are instrumental in automating repetitive software tasks, proposing code improvements, and facilitating the conversion of natural language into executable code. Notable among these are Starcoder (Li et al., 2023; Lozhkov et al., 2024), CodeLlama (Rozière et al., 2023), and Code-Qwen (Bai et al., 2023), each bringing unique contributions to the enhancement of coding assistance tools. With these advancements, Code LLMs showcase a promising trajectory for further revolutionizing how developers interact with code, promising ever-greater efficiency and intuitiveness in software creation. Insprired by the success of the grammar-based parsed tree in many fields, we adopt the abstract syntax tree to augment the code completion training.
+            </p>
+          </div>
+
+          <div class="content has-text-justified">
+            <p>
+              <span class="dnerf">Repo-level Code Evaluation.</span>
+              In the domain of code evaluation, a rich tapestry of benchmarks (Zheng et al., 2023; Yu et al., 2024; Yin et al., 2023; Peng et al., 2024; Khan et al., 2023; Guo et al., 2024b) has been woven to address the challenges of accurately assessing code quality, functionality, and efficiency, such as HumanEval (Chen et al., 2021), MBPP (Austin et al., 2021), their upgraded version EvalPlus (Liu et al., 2023a), and the multilingual benchmark MultiPL-E (Cassano et al., 2023) and McEval (Chai et al., 2024). Studies have explored a variety of approaches, ranging from static analysis techniques (e.g. exact match (EM) and edit similarity (ES)), which examine code without executing it, to dynamic methods that involve code execution in controlled environments (e.g. Pass@k). The current benchmarks support code models to evaluate a series of different types of tasks, such as code understanding, code repair (Lin et al., 2017;
+              Tian et al., 2024; Jimenez et al., 2023; Zhang et al., 2023; Prenner and Robbes, 2023; He et al., 2022), code translation (Yan et al., 2023), and multilingual scenarios (Wang et al., 2023; Athiwaratkun et al., 2023; Zheng et al., 2023; Peng et al., 2024;
+              Orlanski et al., 2023).	An important task FIM
+              (Fried et al., 2022; Bavarian et al., 2022; Allal et al., 2023) is to fill the middle code, given the prefix and suffix code, which provides substantial assistance for software development. Repo-level completion, such as CrossCodeEval (Ding et al., 2023) and RepoBench (Liu et al., 2023b) only using exact match and edit similarity without code execution can not accurately reflect the model performance and Humaneval-Fim (Zheng et al., 2023) focus in-file evaluation
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Conclusion.</h2>
+          <div class="content has-text-justified">
+            <p>
+              In this work, we represent a significant leap forward in the realm of code completion, driven by the advancements in large language models (LLMs) tailored for coding tasks. By introducing an executable repository-level benchmark, EXECREPOBENCH, alongside a novel, multi-level grammarbased instruction corpora, REPO-INSTRUCT, the study not only tackles the limitations of existing benchmarks but also sets a new standard for evaluating code completion tools in real-world software development scenarios. The fine-tuning of base LLMs with 7B parameters, culminating in Qwen2.5-Coder-Instruct-C, demonstrates a remarkable improvement in code completion accuracy and efficiency across various programming languages, outperforming previous models. We pave the way for more sophisticated, accurate, and contextually aware code completion aids, promising to significantly enhance developer productivity, reduce error rates, and make software development more accessible and efficient for programmers worldwide.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <img src="./images/figure5.png" alt="Code Generation Live Evaluation" class="teaser-image" width="30%"
+        height="30%" class="center" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Limitations.</h2>
+          <div class="content has-text-justified">
+            <p>
+              We acknowledge the following limitations of this study: (1) The evaluation in repository-level multilingual scenario is not fully explored. (2) The code completion model Qwen2.5-Coder-Instruct-C is mainly supervised fine-tuned on the 7B opensource base LLMs. In the future, we will try the (3) The fine-tuned model can be further improved using RLHF for better user experience, such as DPO.
+            </p>
+          </div>
+          <div class="content has-text-justified">
+            <span class="dnerf">Ethics Statement.</span>
+              This research adheres to ethical guidelines for AI development. We aim to enhance the capabilities of large language models (LLMs) while acknowledging potential risks such as bias, misuse, and privacy concerns. To mitigate these, we advocate for transparency, rigorous bias testing, robust security measures, and human oversight in AI applications. Our goal is to contribute positively to the field and to encourage responsible AI development and deployment.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+          <div class="rounded-box is-centered">
+            Citation<br>
+            @inproceedings{<br>
+              title={EXECREPOBENCH: Executable Code Completion Evaluation with Code Large Language Models},<br>
+              author={Jian Yang, Jiajun Zhang, Jiaxi Yang, Ke Jin, Lei Zhang, Qiyao Peng, Ken Deng, Tianyu Liu, Zeyu Cui, Binyuan Hui, Junyang Lin},<br>
+              booktitle={},<br>
+              year={2025},<br>
+              url={}
+            }
+          </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

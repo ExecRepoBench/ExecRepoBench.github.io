@@ -1,0 +1,749 @@
+{
+    "performances": [
+        {
+            "model": "Claude-3.5-Sonnet-20240620",
+            "Size": "🔒",
+            "Random_Span_ES": "88.9/2.2",
+            "Random_Span_Pass@1": "77.3/13.6",
+            "Random_Singleline_ES": "74.2/18.0",
+            "Random_Singleline_Pass@1": "81.4/11.9",
+            "Random_Multiline_ES": "78.9/10.5",
+            "Random_Multiline_Pass@1": "71.4/28.6",
+            "Grammar_Expression_ES": "63.6/4.5",
+            "Grammar_Expression_Pass@1": "88.9/2.2",
+            "Grammar_Statement_ES": "77.3/13.6",
+            "Grammar_Statement_Pass@1": "74.2/18.0",
+            "Grammar_Function_ES": "81.4/11.9",
+            "Grammar_Function_Pass@1": "78.9/10.5",
+            "Grammar_Avg_ES": "77.8/12.5",
+            "Grammar_Avg_Pass@1": "Proprietary LLMs"
+        },
+        {
+            "model": "Claude-3.5-Sonnet-20241022",
+            "Size": "🔒",
+            "User Interface&Experience": "82.2/6.7",
+            "Development&Programming": "75.8/12.9",
+            "Specialized Computing": "76.4/16.9",
+            "Tools, Environments, and Practices": "84.7/10.2",
+            "Emerging Technologies&Applications": "84.2/13.2",
+            "Miscellaneous and General Inquiry": "57.1/28.6",
+            "Databases&Data Handling": "68.2/22.7",
+            "Avg": "78.1/13.5",
+            "group1": "Proprietary LLMs",
+            "group2": "200B+"
+        },
+        {
+            "model": "GPT-3.5-turbo-0125",
+            "Size": "🔒",
+            "User Interface&Experience": "17.8/24.4",
+            "Development&Programming": "11.4/20.5",
+            "Specialized Computing": "4.5/19.1",
+            "Tools, Environments, and Practices": "11.9/18.6",
+            "Emerging Technologies&Applications": "10.5/21.1",
+            "Miscellaneous and General Inquiry": "13.6/9.1",
+            "Databases&Data Handling": "0.0/14.3",
+            "Avg": "10.5/19.6",
+            "group1": "Proprietary LLMs",
+            "group2": "200B+"
+        },
+        {
+            "model": "GPT-4o-mini-2024-07-18",
+            "Size": "🔒",
+            "User Interface&Experience": "71.1/13.3",
+            "Development&Programming": "62.1/17.4",
+            "Specialized Computing": "50.0/13.6",
+            "Tools, Environments, and Practices": "65.2/14.6",
+            "Emerging Technologies&Applications": "72.9/13.6",
+            "Miscellaneous and General Inquiry": "71.1/18.4",
+            "Databases&Data Handling": "71.4/14.3",
+            "Avg": "65.8/15.6",
+            "group1": "Proprietary LLMs",
+            "group2": "200B+"
+        },
+        {
+            "model": "GPT-4o-2024-08-06",
+            "Size": "🔒",
+            "User Interface&Experience": "66.7/17.8",
+            "Development&Programming": "72.7/19.7",
+            "Specialized Computing": "62.9/19.1",
+            "Tools, Environments, and Practices": "69.5/15.3",
+            "Emerging Technologies&Applications": "76.3/13.2",
+            "Miscellaneous and General Inquiry": "85.7/14.3",
+            "Databases&Data Handling": "59.1/22.7",
+            "Avg": "69.1/18.1",
+            "group1": "Proprietary LLMs",
+            "group2": "200B+"
+        },
+        {
+            "model": "o1-mini",
+            "Size": "🔒",
+            "User Interface&Experience": "93.3/4.4",
+            "Development&Programming": "94.7/2.6",
+            "Specialized Computing": "84.1/7.6",
+            "Tools, Environments, and Practices": "91.0/5.6",
+            "Emerging Technologies&Applications": "88.1/3.4",
+            "Miscellaneous and General Inquiry": "95.5/0.0",
+            "Databases&Data Handling": "100.0/0.0",
+            "Avg": "89.3/5.1",
+            "group1": "Proprietary LLMs",
+            "group2": "200B+"
+        },
+        {
+            "model": "o1-preview",
+            "Size": "🔒",
+            "User Interface&Experience": "93.3/2.2",
+            "Development&Programming": "81.8/7.6",
+            "Specialized Computing": "85.4/7.9",
+            "Tools, Environments, and Practices": "78.0/6.8",
+            "Emerging Technologies&Applications": "92.1/2.6",
+            "Miscellaneous and General Inquiry": "77.3/4.5",
+            "Databases&Data Handling": "71.4/28.6",
+            "Avg": "83.9/6.6",
+            "group1": "Proprietary LLMs",
+            "group2": "200B+"
+        },
+        {
+            "model": "Yi-lightning",
+            "Size": "🔒",
+            "User Interface&Experience": "62.2/15.6",
+            "Development&Programming": "60.0/11.5",
+            "Specialized Computing": "57.9/5.3",
+            "Tools, Environments, and Practices": "49.4/16.9",
+            "Emerging Technologies&Applications": "71.2/11.9",
+            "Miscellaneous and General Inquiry": "54.5/13.6",
+            "Databases&Data Handling": "85.7/0.0",
+            "Avg": "59.5/12.6",
+            "group1": "Proprietary LLMs",
+            "group2": "200B+"
+        },
+        {
+            "model": "Qwen-Max",
+            "Size": "🔒",
+            "User Interface&Experience": "75.6/17.8",
+            "Development&Programming": "74.2/13.6",
+            "Specialized Computing": "59.6/24.7",
+            "Tools, Environments, and Practices": "78.0/6.8",
+            "Emerging Technologies&Applications": "68.4/23.7",
+            "Miscellaneous and General Inquiry": "100.0/0.0",
+            "Databases&Data Handling": "81.8/4.5",
+            "Avg": "71.9/15.8",
+            "group1": "Proprietary LLMs",
+            "group2": "200B+"
+        },
+        {
+            "model": "Qwen2.5-0.5B-Instruct",
+            "Size": "0.5B",
+            "User Interface&Experience": "2.2/4.4",
+            "Development&Programming": "4.6/4.6",
+            "Specialized Computing": "5.3/10.5",
+            "Tools, Environments, and Practices": "2.2/4.5",
+            "Emerging Technologies&Applications": "3.4/5.1",
+            "Miscellaneous and General Inquiry": "4.5/9.1",
+            "Databases&Data Handling": "0.0/14.3",
+            "Avg": "3.6/5.6",
+            "group1": "Open-source LLMs",
+            "group2": "0.5B+"
+        },
+        {
+            "model": "Qwen2.5-Coder-0.5B-Instruct",
+            "Size": "0.5B",
+            "User Interface&Experience": "2.2/2.2",
+            "Development&Programming": "4.6/6.9",
+            "Specialized Computing": "2.6/5.3",
+            "Tools, Environments, and Practices": "4.5/2.2",
+            "Emerging Technologies&Applications": "3.4/5.1",
+            "Miscellaneous and General Inquiry": "4.5/0.0",
+            "Databases&Data Handling": "28.6/14.3",
+            "Avg": "4.4/4.6",
+            "group1": "Open-source LLMs",
+            "group2": "0.5B+"
+        },
+        {
+            "model": "DS-Coder-1.3B-Instruct",
+            "Size": "1.3B",
+            "User Interface&Experience": "66.7/2.2",
+            "Development&Programming": "2.3/5.4",
+            "Specialized Computing": "2.6/10.5",
+            "Tools, Environments, and Practices": "1.7/6.8",
+            "Emerging Technologies&Applications": "0.0/9.1",
+            "Miscellaneous and General Inquiry": "2.2/3.4",
+            "Databases&Data Handling": "0.0/14.3",
+            "Avg": "2.6/5.6",
+            "group1": "Open-source LLMs",
+            "group2": "1B+"
+        },
+        {
+            "model": "Yi-Coder-1.5B-Chat",
+            "Size": "1.5B",
+            "User Interface&Experience": "11.1/2.2",
+            "Development&Programming": "5.1/3.4",
+            "Specialized Computing": "5.4/4.6",
+            "Tools, Environments, and Practices": "2.6/5.3",
+            "Emerging Technologies&Applications": "2.2/5.6",
+            "Miscellaneous and General Inquiry": "4.5/4.5",
+            "Databases&Data Handling": "14.3/14.3",
+            "Avg": "7.4/5.1",
+            "group1": "Open-source LLMs",
+            "group2": "1B+"
+        },
+        {
+            "model": "Qwen2.5-Coder-1.5B-Instruct",
+            "Size": "1.5B",
+            "User Interface&Experience": "11.1/4.4",
+            "Development&Programming": "15.9/9.1",
+            "Specialized Computing": "9.0/16.9",
+            "Tools, Environments, and Practices": "13.6/11.9",
+            "Emerging Technologies&Applications": "13.2/5.3",
+            "Miscellaneous and General Inquiry": "14.3/42.9",
+            "Databases&Data Handling": "18.2/4.5",
+            "Avg": "13.2/10.7",
+            "group1": "Open-source LLMs",
+            "group2": "1B+"
+        },
+        {
+            "model": "OpenCoder-1.5B-Instruct",
+            "Size": "1.5B",
+            "User Interface&Experience": "11.1/4.4",
+            "Development&Programming": "3.8/5.4",
+            "Specialized Computing": "0.0/5.3",
+            "Tools, Environments, and Practices": "2.2/4.5",
+            "Emerging Technologies&Applications": "3.4/8.5",
+            "Miscellaneous and General Inquiry": "4.5/9.1",
+            "Databases&Data Handling": "0.0/0.0",
+            "Avg": "6.7/3.8",
+            "group1": "Open-source LLMs",
+            "group2": "1B+"
+        },
+        {
+            "model": "Qwen2.5-Coder-3B-Instruct",
+            "Size": "3B",
+            "User Interface&Experience": "35.6/11.1",
+            "Development&Programming": "29.5/10.6",
+            "Specialized Computing": "27.0/15.7",
+            "Tools, Environments, and Practices": "20.3/18.6",
+            "Emerging Technologies&Applications": "28.9/10.5",
+            "Miscellaneous and General Inquiry": "42.9/14.3",
+            "Databases&Data Handling": "27.3/13.6",
+            "Avg": "28.3/13.3",
+            "group1": "Open-source LLMs",
+            "group2": "3B+"
+        },
+        {
+            "model": "CodeLlama-7B-Instruct",
+            "Size": "7B",
+            "User Interface&Experience": "33.3/8.9",
+            "Development&Programming": "28.8/18.6",
+            "Specialized Computing": "23.8/13.8",
+            "Tools, Environments, and Practices": "18.2/9.1",
+            "Emerging Technologies&Applications": "31.6/5.3",
+            "Miscellaneous and General Inquiry": "29.2/14.6",
+            "Databases&Data Handling": "71.4/0.0",
+            "Avg": "28.2/12.8",
+            "group1": "Open-source LLMs",
+            "group2": "6B+"
+        },
+        {
+            "model": "Llama3-8B-Instruct",
+            "Size": "7B",
+            "User Interface&Experience": "20.0/17.8",
+            "Development&Programming": "14.6/11.5",
+            "Specialized Computing": "15.8/2.6",
+            "Tools, Environments, and Practices": "13.5/9.0",
+            "Emerging Technologies&Applications": "16.9/11.9",
+            "Miscellaneous and General Inquiry": "22.7/0.0",
+            "Databases&Data Handling": "57.1/14.3",
+            "Avg": "16.7/10.3",
+            "group1": "Open-source LLMs",
+            "group2": "6B+"
+        },
+        {
+            "model": "Llama3.1-8B-Instruct",
+            "Size": "7B",
+            "User Interface&Experience": "2.2/8.9",
+            "Development&Programming": "4.5/10.1",
+            "Specialized Computing": "3.8/6.2",
+            "Tools, Environments, and Practices": "3.4/6.8",
+            "Emerging Technologies&Applications": "5.3/2.6",
+            "Miscellaneous and General Inquiry": "9.1/9.1",
+            "Databases&Data Handling": "14.3/0.0",
+            "Avg": "7.9/4.4",
+            "group1": "Open-source LLMs",
+            "group2": "6B+"
+        },
+        {
+            "model": "DS-Coder-6.7B-Instruct",
+            "Size": "6.7B",
+            "User Interface&Experience": "11.1/17.8",
+            "Development&Programming": "13.1/13.8",
+            "Specialized Computing": "13.6/8.5",
+            "Tools, Environments, and Practices": "13.2/7.9",
+            "Emerging Technologies&Applications": "9.0/7.9",
+            "Miscellaneous and General Inquiry": "13.6/4.5",
+            "Databases&Data Handling": "28.6/0.0",
+            "Avg": "12.3/10.8",
+            "group1": "Open-source LLMs",
+            "group2": "6B+"
+        },
+        {
+            "model": "CodeQwen1.5-7B-Chat",
+            "Size": "7B",
+            "User Interface&Experience": "17.8/15.6",
+            "Development&Programming": "13.8/12.3",
+            "Specialized Computing": "15.8/0.0",
+            "Tools, Environments, and Practices": "15.7/9.0",
+            "Emerging Technologies&Applications": "15.3/15.3",
+            "Miscellaneous and General Inquiry": "18.2/13.6",
+            "Databases&Data Handling": "14.3/42.9",
+            "Avg": "15.4/11.8",
+            "group1": "Open-source LLMs",
+            "group2": "6B+"
+        },
+        {
+            "model": "Yi-Coder-9B-Chat",
+            "Size": "9B",
+            "User Interface&Experience": "15.6/17.8",
+            "Development&Programming": "15.4/9.2",
+            "Specialized Computing": "15.8/7.9",
+            "Tools, Environments, and Practices": "13.5/13.5",
+            "Emerging Technologies&Applications": "10.2/20.3",
+            "Miscellaneous and General Inquiry": "18.2/13.6",
+            "Databases&Data Handling": "28.6/28.6",
+            "Avg": "14.6/13.3",
+            "group1": "Open-source LLMs",
+            "group2": "6B+"
+        },
+        {
+            "model": "DS-Coder-V2-Lite-Instruct",
+            "Size": "2.4/16B",
+            "User Interface&Experience": "42.2/20.0",
+            "Development&Programming": "33.3/17.4",
+            "Specialized Computing": "31.5/16.9",
+            "Tools, Environments, and Practices": "35.6/20.3",
+            "Emerging Technologies&Applications": "39.5/21.1",
+            "Miscellaneous and General Inquiry": "71.4/14.3",
+            "Databases&Data Handling": "31.8/22.7",
+            "Avg": "35.5/18.6",
+            "group1": "Open-source LLMs",
+            "group2": "6B+"
+        },
+        {
+            "model": "Qwen2.5-Coder-7B-Instruct",
+            "Size": "7B",
+            "User Interface&Experience": "40.0/22.2",
+            "Development&Programming": "46.2/19.7",
+            "Specialized Computing": "43.8/15.7",
+            "Tools, Environments, and Practices": "40.7/20.3",
+            "Emerging Technologies&Applications": "34.2/15.8",
+            "Miscellaneous and General Inquiry": "71.4/0.0",
+            "Databases&Data Handling": "40.9/22.7",
+            "Avg": "43.1/18.6",
+            "group1": "Open-source LLMs",
+            "group2": "6B+"
+        },
+        {
+            "model": "OpenCoder-8B-Instruct",
+            "Size": "8B",
+            "User Interface&Experience": "24.4/8.9",
+            "Development&Programming": "14.6/8.5",
+            "Specialized Computing": "10.5/7.9",
+            "Tools, Environments, and Practices": "9.0/4.5",
+            "Emerging Technologies&Applications": "13.6/6.8",
+            "Miscellaneous and General Inquiry": "18.2/9.1",
+            "Databases&Data Handling": "14.3/0.0",
+            "Avg": "14.1/7.1",
+            "group1": "Open-source LLMs",
+            "group2": "6B+"
+        },
+        {
+            "model": "CodeLlama-13B-Instruct",
+            "Size": "13B",
+            "User Interface&Experience": "13.3/4.4",
+            "Development&Programming": "7.9/6.7",
+            "Specialized Computing": "6.8/8.5",
+            "Tools, Environments, and Practices": "7.7/6.2",
+            "Emerging Technologies&Applications": "4.5/4.5",
+            "Miscellaneous and General Inquiry": "5.3/5.3",
+            "Databases&Data Handling": "14.3/14.3",
+            "Avg": "11.2/7.9",
+            "group1": "Open-source LLMs",
+            "group2": "13B+"
+        },
+        {
+            "model": "Starcoder2-15B-Instruct-v0.1",
+            "Size": "15B",
+            "User Interface&Experience": "6.7/6.7",
+            "Development&Programming": "6.8/12.9",
+            "Specialized Computing": "4.5/15.7",
+            "Tools, Environments, and Practices": "6.8/6.8",
+            "Emerging Technologies&Applications": "5.3/13.2",
+            "Miscellaneous and General Inquiry": "13.6/13.6",
+            "Databases&Data Handling": "0.0/14.3",
+            "Avg": "6.4/12.0",
+            "group1": "Open-source LLMs",
+            "group2": "13B+"
+        },
+        {
+            "model": "Qwen2.5-Coder-14B-Instruct",
+            "Size": "14B",
+            "User Interface&Experience": "51.1/24.4",
+            "Development&Programming": "53.0/17.4",
+            "Specialized Computing": "52.8/16.9",
+            "Tools, Environments, and Practices": "50.8/18.6",
+            "Emerging Technologies&Applications": "57.9/7.9",
+            "Miscellaneous and General Inquiry": "28.6/28.6",
+            "Databases&Data Handling": "36.4/27.3",
+            "Avg": "60.6/51.5",
+            "group1": "Open-source LLMs",
+            "group2": "13B+"
+        },
+        {
+            "model": "CodeLlama-34B-Instruct",
+            "Size": "34B",
+            "User Interface&Experience": "11.1/6.7",
+            "Development&Programming": "2.6/2.6",
+            "Specialized Computing": "6.9/2.3",
+            "Tools, Environments, and Practices": "8.5/6.8",
+            "Emerging Technologies&Applications": "7.9/10.1",
+            "Miscellaneous and General Inquiry": "9.1/9.1",
+            "Databases&Data Handling": "14.3/0.0",
+            "Avg": "7.7/5.6",
+            "group1": "Open-source LLMs",
+            "group2": "20B+"
+        },
+        {
+            "model": "CodeStral-22B-v0.1",
+            "Size": "22B",
+            "User Interface&Experience": "17.8/22.2",
+            "Development&Programming": "27.3/13.6",
+            "Specialized Computing": "14.6/14.6",
+            "Tools, Environments, and Practices": "25.4/10.2",
+            "Emerging Technologies&Applications": "18.4/10.5",
+            "Miscellaneous and General Inquiry": "14.3/42.9",
+            "Databases&Data Handling": "22.7/22.7",
+            "Avg": "21.7/15.8",
+            "group1": "Open-source LLMs",
+            "group2": "20B+"
+        },
+        {
+            "model": "DS-Coder-33B-Instruct",
+            "Size": "33B",
+            "User Interface&Experience": "13.3/11.1",
+            "Development&Programming": "22.0/9.8",
+            "Specialized Computing": "12.4/12.4",
+            "Tools, Environments, and Practices": "13.6/6.8",
+            "Emerging Technologies&Applications": "13.2/18.4",
+            "Miscellaneous and General Inquiry": "28.6/42.9",
+            "Databases&Data Handling": "22.7/18.2",
+            "Avg": "16.8/12.0",
+            "group1": "Open-source LLMs",
+            "group2": "20B+"
+        },
+        {
+            "model": "CodeLlama-70B-Instruct",
+            "Size": "70B",
+            "User Interface&Experience": "11.1/22.2",
+            "Development&Programming": "9.2/10.0",
+            "Specialized Computing": "10.5/5.3",
+            "Tools, Environments, and Practices": "9.0/6.7",
+            "Emerging Technologies&Applications": "16.9/8.5",
+            "Miscellaneous and General Inquiry": "9.1/13.6",
+            "Databases&Data Handling": "0.0/0.0",
+            "Avg": "15.5/10.5",
+            "group1": "Open-source LLMs",
+            "group2": "20B+"
+        },
+        {
+            "model": "DS-Coder-V2-Instruct",
+            "Size": "21/236B",
+            "User Interface&Experience": "55.6/11.1",
+            "Development&Programming": "62.1/18.2",
+            "Specialized Computing": "60.7/14.6",
+            "Tools, Environments, and Practices": "50.8/18.6",
+            "Emerging Technologies&Applications": "52.6/21.1",
+            "Miscellaneous and General Inquiry": "71.4/14.3",
+            "Databases&Data Handling": "40.9/31.8",
+            "Avg": "57.4/17.6",
+            "group1": "Open-source LLMs",
+            "group2": "20B+"
+        },
+        {
+            "model": "DS-V2.5",
+            "Size": "21/236B",
+            "User Interface&Experience": "77.8/11.1",
+            "Development&Programming": "72.0/12.9",
+            "Specialized Computing": "71.9/13.5",
+            "Tools, Environments, and Practices": "71.2/8.5",
+            "Emerging Technologies&Applications": "73.7/10.5",
+            "Miscellaneous and General Inquiry": "100.0/0.0",
+            "Databases&Data Handling": "68.2/13.6",
+            "Avg": "73.0/11.7",
+            "group1": "Open-source LLMs",
+            "group2": "20B+"
+        },
+        {
+            "model": "Llama3-70B-Instruct",
+            "Size": "7B",
+            "User Interface&Experience": "35.6/20.0",
+            "Development&Programming": "26.2/26.2",
+            "Specialized Computing": "25.4/22.0",
+            "Tools, Environments, and Practices": "34.2/15.8",
+            "Emerging Technologies&Applications": "23.6/14.6",
+            "Miscellaneous and General Inquiry": "36.4/4.5",
+            "Databases&Data Handling": "14.3/57.1",
+            "Avg": "27.7/20.5",
+            "group1": "Open-source LLMs",
+            "group2": "20B+"
+        },
+        {
+            "model": "Llama3.1-70B-Instruct",
+            "Size": "7B",
+            "User Interface&Experience": "48.9/24.4",
+            "Development&Programming": "43.8/20.0",
+            "Specialized Computing": "34.2/26.3",
+            "Tools, Environments, and Practices": "40.4/22.5",
+            "Emerging Technologies&Applications": "54.2/20.3",
+            "Miscellaneous and General Inquiry": "45.5/9.1",
+            "Databases&Data Handling": "71.4/14.3",
+            "Avg": "44.9/21.0",
+            "group1": "Open-source LLMs",
+            "group2": "20B+"
+        },
+        {
+            "model": "Qwen2.5-Coder-32B-Instruct",
+            "Size": "32B",
+            "User Interface&Experience": "71.1/13.3",
+            "Development&Programming": "66.7/15.9",
+            "Specialized Computing": "67.4/16.9",
+            "Tools, Environments, and Practices": "74.6/13.6",
+            "Emerging Technologies&Applications": "65.8/18.4",
+            "Miscellaneous and General Inquiry": "100.0/0.0",
+            "Databases&Data Handling": "63.6/18.2",
+            "Avg": "68.9/15.6",
+            "group1": "Open-source LLMs",
+            "group2": "20B+"
+        },
+        {
+            "model": "Qwen2.5-32B-Instruct",
+            "Size": "32B",
+            "User Interface&Experience": "62.2/15.6",
+            "Development&Programming": "52.3/15.4",
+            "Specialized Computing": "57.9/18.4",
+            "Tools, Environments, and Practices": "50.6/23.6",
+            "Emerging Technologies&Applications": "54.2/13.6",
+            "Miscellaneous and General Inquiry": "50.0/13.6",
+            "Databases&Data Handling": "71.4/14.3",
+            "Avg": "54.1/17.1",
+            "group1": "Open-source LLMs",
+            "group2": "20B+"
+        },
+        {
+            "model": "Qwen2.5-72B-Instruct",
+            "Size": "72B",
+            "User Interface&Experience": "82.2/6.7",
+            "Development&Programming": "71.5/14.6",
+            "Specialized Computing": "76.3/13.2",
+            "Tools, Environments, and Practices": "75.3/15.7",
+            "Emerging Technologies&Applications": "71.2/18.6",
+            "Miscellaneous and General Inquiry": "63.6/13.6",
+            "Databases&Data Handling": "85.7/14.3",
+            "Avg": "73.8/14.4",
+            "group1": "Open-source LLMs",
+            "group2": "20B+"
+        },
+        {
+            "model": "QwQ-32B-Preview",
+            "Size": "32B",
+            "User Interface&Experience": "53.3/15.6",
+            "Development&Programming": "56.8/16.7",
+            "Specialized Computing": "50.6/16.9",
+            "Tools, Environments, and Practices": "64.4/5.1",
+            "Emerging Technologies&Applications": "52.6/21.1",
+            "Miscellaneous and General Inquiry": "85.7/0.0",
+            "Databases&Data Handling": "63.6/9.1",
+            "Avg": "56.6/14.5",
+            "group1": "Open-source LLMs",
+            "group2": "20B+"
+        },
+        {
+            "model": "Qwen-SynCoder",
+            "Size": "32B",
+            "User Interface&Experience": "55.6/26.7",
+            "Development&Programming": "49.2/20.8",
+            "Specialized Computing": "36.8/36.8",
+            "Tools, Environments, and Practices": "50.6/20.2",
+            "Emerging Technologies&Applications": "52.5/20.3",
+            "Miscellaneous and General Inquiry": "40.9/18.2",
+            "Databases&Data Handling": "57.1/0.0",
+            "Avg": "49.2/22.3",
+            "group1": "Open-source LLMs",
+            "group2": "20B+"
+        }
+    ],
+    "models": [
+        {
+            "model_name": "Claude-3.5-Sonnet-20240620"
+        },
+        {
+            "model_name": "Claude-3.5-Sonnet-20241022"
+        },
+        {
+            "model_name": "GPT-3.5-turbo-0125"
+        },
+        {
+            "model_name": "GPT-4o-mini-2024-07-18"
+        },
+        {
+            "model_name": "GPT-4o-2024-08-06"
+        },
+        {
+            "model_name": "o1-mini"
+        },
+        {
+            "model_name": "o1-preview"
+        },
+        {
+            "model_name": "Yi-lightning"
+        },
+        {
+            "model_name": "Qwen-Max"
+        },
+        {
+            "model_name": "Qwen2.5-0.5B-Instruct"
+        },
+        {
+            "model_name": "Qwen2.5-Coder-0.5B-Instruct"
+        },
+        {
+            "model_name": "DS-Coder-1.3B-Instruct"
+        },
+        {
+            "model_name": "Yi-Coder-1.5B-Chat"
+        },
+        {
+            "model_name": "Qwen2.5-Coder-1.5B-Instruct"
+        },
+        {
+            "model_name": "OpenCoder-1.5B-Instruct"
+        },
+        {
+            "model_name": "Qwen2.5-Coder-3B-Instruct"
+        },
+        {
+            "model_name": "CodeLlama-7B-Instruct"
+        },
+        {
+            "model_name": "Llama3-8B-Instruct"
+        },
+        {
+            "model_name": "Llama3.1-8B-Instruct"
+        },
+        {
+            "model_name": "DS-Coder-6.7B-Instruct"
+        },
+        {
+            "model_name": "CodeQwen1.5-7B-Chat"
+        },
+        {
+            "model_name": "Yi-Coder-9B-Chat"
+        },
+        {
+            "model_name": "DS-Coder-V2-Lite-Instruct"
+        },
+        {
+            "model_name": "Qwen2.5-Coder-7B-Instruct"
+        },
+        {
+            "model_name": "OpenCoder-8B-Instruct"
+        },
+        {
+            "model_name": "CodeLlama-13B-Instruct"
+        },
+        {
+            "model_name": "Starcoder2-15B-Instruct-v0.1"
+        },
+        {
+            "model_name": "Qwen2.5-Coder-14B-Instruct"
+        },
+        {
+            "model_name": "CodeLlama-34B-Instruct"
+        },
+        {
+            "model_name": "CodeStral-22B-v0.1"
+        },
+        {
+            "model_name": "DS-Coder-33B-Instruct"
+        },
+        {
+            "model_name": "CodeLlama-70B-Instruct"
+        },
+        {
+            "model_name": "DS-Coder-V2-Instruct"
+        },
+        {
+            "model_name": "DS-V2.5"
+        },
+        {
+            "model_name": "Llama3-70B-Instruct"
+        },
+        {
+            "model_name": "Llama3.1-70B-Instruct"
+        },
+        {
+            "model_name": "Qwen2.5-Coder-32B-Instruct"
+        },
+        {
+            "model_name": "Qwen2.5-32B-Instruct"
+        },
+        {
+            "model_name": "Qwen2.5-72B-Instruct"
+        },
+        {
+            "model_name": "QwQ-32B-Preview"
+        },
+        {
+            "model_name": "Qwen-SynCoder"
+        }
+    ],
+    "date_marks": [
+        1682892000000 ,
+        1685570400000 ,
+        1688162400000 ,
+        1690840800000 ,
+        1693519200000 ,
+        1696111200000 ,
+        1698793200000 ,
+        1701385200000 ,
+        1704063600000 ,
+        1706742000000 ,
+        1706742000000 ,
+        1709247600000 ,
+        1711922400000 ,
+        1682892000000 ,
+        1685570400000 ,
+        1688162400000 ,
+        1690840800000 ,
+        1693519200000 ,
+        1696111200000 ,
+        1698793200000 ,
+        1701385200000 ,
+        1704063600000 ,
+        1706742000000 ,
+        1709247600000 ,
+        1711922400000 ,
+        1682892000000 ,
+        1685570400000 ,
+        1688162400000 ,
+        1690840800000 ,
+        1693519200000 ,
+        1696111200000 ,
+        1698793200000 ,
+        1704063600000 ,
+        1696111200000 ,
+        1682892000000 ,
+        1685570400000 ,
+        1690840800000 ,
+        1688162400000 ,
+        1688162400000 ,
+        1688162400000
+    ]
+}
