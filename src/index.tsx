@@ -114,7 +114,7 @@ ReactDOM.render(
               <div className="column has-text-centered">
                 <div className="publication-links">
                   <span className="link-block">
-                    <a href=""
+                    <a href="https://arxiv.org/abs/2412.11990"
                       className="external-link button is-large is-rounded is-dark">
                       <span className="icon">
                         <i className="fas fa-file-pdf "></i>
@@ -124,7 +124,7 @@ ReactDOM.render(
                   </span>
                   <span className="spacer"></span>
                   <span className="link-block">
-                    <a href="https://github.com/QwenLM/Qwen2.5-Coder/tree/main/qwencoder-eval/instruct/CodeArena"
+                    <a href=""
                       className="external-link button is-large is-rounded is-dark">
                       <span className="icon">
                         <i className="fab fa-github"></i>
@@ -134,7 +134,7 @@ ReactDOM.render(
                   </span>
                   <span className="spacer"></span>
                   <span className="link-block">
-                    <a href="https://huggingface.co/datasets/CSJianYang/CodeArena"
+                    <a href="https://huggingface.co/datasets/CSJianYang/ExecRepoBench"
                       className="external-link button is-large is-rounded is-dark">
                       <span className="icon">
                         <i className="far fa-images"></i>
@@ -145,7 +145,7 @@ ReactDOM.render(
                   <span className="spacer"></span>
                   <span className="link-block">
                     <a
-                      href="https://ali-codearena.github.io/Ali-CodeArena/"
+                      href="https://execrepobench.github.io/"
                       className="external-link button is-large is-rounded is-dark"
                     >
                       <span className="icon">
